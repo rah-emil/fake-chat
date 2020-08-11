@@ -1,0 +1,41 @@
+{
+  "name": "fake-chat",
+  "version": "2.0.0",
+  "description": "Fake-chat.js is a handy chat emulator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rah-emil/fake-chat.js.git"
+  },
+  "keywords": [
+    "chat",
+    "javascript",
+    "fake-chat",
+    "demo-data"
+  ],
+  "author": "Rah Emil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rah-emil/fake-chat.js/issues"
+  },
+  "homepage": "https://github.com/rah-emil/fake-chat.js#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-less": "^4.0.1",
+    "gulp-newer": "^1.4.0",
+    "gulp-rsync": "0.0.9",
+    "gulp-sass": "^4.1.0",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify-es": "^2.0.0"
+  }
+}
