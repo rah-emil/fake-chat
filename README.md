@@ -3,6 +3,17 @@
 **Fake-chat.js** - это удобный эмулятор чата.
 
 ------------
+### Подключение
+CDN:
+```html
+<link rel="stylesheet" href="https://cdn.rah-emil.ru/fake-chat.js/fake-chat.min.css">
+<script src="https://cdn.rah-emil.ru/fake-chat.js/fake-chat.min.js"></script>
+```
+
+Локально:
+(https://github.com/rah-emil/fake-chat.js/tree/master/app "Скачать файлы")
+
+------------
 ### Инструкция
 Ваш html:
 ```html

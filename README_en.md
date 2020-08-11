@@ -3,6 +3,17 @@
 **Fake-chat.js** is a handy chat emulator.
 
 ------------
+### Get started
+CDN:
+```html
+<link rel="stylesheet" href="https://cdn.rah-emil.ru/fake-chat.js/fake-chat.min.css">
+<script src="https://cdn.rah-emil.ru/fake-chat.js/fake-chat.min.js"></script>
+```
+
+Local:
+(https://github.com/rah-emil/fake-chat.js/tree/master/app "Download files")
+
+------------
 ### Instructions
 Your html:
 ```html
