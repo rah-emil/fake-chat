@@ -1,5 +1,5 @@
 # Fake-chat.js 📫
-![Example №1](https://rah-emil.ru/img/fake-chat.js.jpg "Example №1")
+![Example №1](https://rah-emil.ru/img/fake-chat.js2.jpg "Example №1")
 **Fake-chat.js** - это удобный эмулятор чата.
 
 ------------
