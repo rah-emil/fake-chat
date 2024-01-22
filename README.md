@@ -1,25 +1,15 @@
 # Fake-chat.js 📫
-![Example №1](https://rah-emil.ru/img/fake-chat.js2.jpg "Example №1")
-**Fake-chat.js** - это удобный эмулятор чата.
+**Fake-chat.js** is a handy chat emulator.
 
 ------------
-### Подключение
-CDN:
-```html
-<link rel="stylesheet" href="https://cdn.rah-emil.ru/fake-chat.js/fake-chat.min.css">
-<script src="https://cdn.rah-emil.ru/fake-chat.js/fake-chat.min.js"></script>
-```
+### Get started
 
-Локально:
-(https://github.com/rah-emil/fake-chat.js/tree/master/app "Скачать файлы")
-
-------------
-### Инструкция
-Ваш html:
+### Instructions
+Your html:
 ```html
 <div id="mychat"></div>
 ```
-Ваш JavaScript:
+Your JavaScript:
 ```javascript
 let mychat = new FakeChat('#mychat', {
 	messages: [
@@ -50,24 +40,11 @@ let mychat = new FakeChat('#mychat', {
 ```
 
 ------------
-### Темы
-##### Цветовые решения:
-- default *(по умолчанию)*
-- timber
-- amin
-- citrus
-- coral
-
-##### Закругления:
-- rounded *(по умолчанию)*
-- square
-
-------------
-### Параметры
-| Параметр  | Тип  | Значение  |
+### Parameters
+| Parameter  | Type  | Value  |
 | :------------ | :------------ | :------------ |
-| messages  | Array  | Массив сообщений, состоящий из объекта сообщения, где **text** - текст сообщения, а **timer** - время публикации сообщения.  |
-| visible  | Boolean  | Если true, то сообщения начнут публиковаться только когда чат появится в области видимости. **По умолчанию false**. |
-| adding  | String  | Порядок публикации сообщений. [Куда по отношению к elem вставлять строку. Всего четыре варианта...](https://learn.javascript.ru/multi-insert "Куда по отношению к elem вставлять строку. Всего четыре варианта...") |
-| theme  | Object  | Объект, содержаший в себе **theme** (*по умочанию "default"*) - имя темы и **angle** - тип уголов (*по умочанию "rounded"*)  |
-| animation  | Object  | Объект, содержаший в себе **class** - основной класс для анимируемого элемента и **function** - функция конкретной анимации  |
+| messages  | Array  | Array of messages, where 1 parameter is the message text, and 2 parameter is the message publication time.  |
+| visible  | Boolean  | If true, then messages will be published only when the chat appears in the area. **Default false**. |
+| adding  | String  | The order of publication of messages. [Where in relation to the element to insert the line. Only four options...](https://learn.javascript.ru/multi-insert "Where in relation to the element to insert the line. Only four options...") |
+| theme  | Object  | Includes "theme" and "angle".  |
+| animation  | Object  | Includes "class" and "function".  |
