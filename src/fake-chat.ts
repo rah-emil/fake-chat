@@ -1,4 +1,6 @@
-export interface FakeChatMessage {
+import delay from './utils/delay';
+
+interface FakeChatMessage {
   /**
    * Text of message
    */
@@ -15,7 +17,7 @@ export interface FakeChatMessage {
   className?: string;
 }
 
-export interface FakeChatOptions {
+interface FakeChatOptions {
   /**
    * The order of adding messages to the wrapper
    */
@@ -27,40 +29,40 @@ export interface FakeChatOptions {
   messages: FakeChatMessage[];
 }
 
-export class FakeChat {
-  private wrapper: HTMLElement | null;
-  private options: FakeChatOptions;
+class FakeChat {
+  public wrapper: HTMLElement | null;
+  public options: FakeChatOptions;
 
-  constructor(el: string, options: FakeChatOptions) {
-    this.wrapper = document.querySelector(el);
+  constructor(el: HTMLElement, options: FakeChatOptions) {
+    this.wrapper = el;
     this.options = options;
-
-    this._init();
   }
 
-  private _init() {
+  public async init() {
     const ms = this.options.messages[0].delay ?? 1000;
-    this._appendMessage(ms);
+    await this._appendMessage(ms);
   }
 
-  private _appendMessage(ms: number) {
-    setTimeout(() => {
-      const messageWrapper = document.createElement('div');
-      const messageContent = document.createTextNode(this.options.messages[0].text);
+  private async _appendMessage(ms: number) {
+    await delay(ms);
 
-      messageWrapper.appendChild(messageContent);
+    const messageWrapper = document.createElement('div');
+    const messageContent = document.createTextNode(this.options.messages[0].text);
 
-      try {
-        this.wrapper?.insertAdjacentElement(this.options.position ?? 'afterend', messageWrapper);
-        this.options.messages.splice(0, 1);
+    messageWrapper.appendChild(messageContent);
 
-        if(this.options.messages.length !== 0) {
-          const ms = this.options.messages[0].delay ?? 1000;
-          this._appendMessage(ms);
-        }
-      } catch(err) {
-        console.warn(err);
+    try {
+      this.wrapper?.insertAdjacentElement(this.options.position ?? 'beforeend', messageWrapper);
+      this.options.messages.splice(0, 1);
+
+      if(this.options.messages.length !== 0) {
+        const ms = this.options.messages[0].delay ?? 1000;
+        await this._appendMessage(ms);
       }
-    }, ms);
+    } catch(err) {
+      console.warn(err);
+    }
   }
 }
+
+export default FakeChat;
