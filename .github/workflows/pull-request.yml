@@ -1,0 +1,31 @@
+name: Check_PR
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Check_PR
+    runs-on: ubuntu-latest
+    steps:
+        - name: Get code
+          uses: actions/checkout@v3
+
+        - name: Setup node
+          uses: actions/setup-node@v3
+          with:
+            node-version: 20
+
+        - name: Install deps
+          run: yarn install
+
+        - name: Linting
+          run: yarn lint
+
+        - name: Build
+          run: yarn build
+
+        - name: Testing
+          run: yarn test
