@@ -30,4 +30,4 @@ jobs:
         run: |
           yarn config set 'npmRegistries[${NPM_REGISTRY}].npmAlwaysAuth' true
           yarn config set 'npmRegistries[${NPM_REGISTRY}].npmAuthToken' ${NODE_AUTH_TOKEN}
-          yarn publish --access public
+          yarn npm publish --access public
