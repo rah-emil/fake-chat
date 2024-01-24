@@ -1,50 +1,60 @@
-# Fake-chat.js 📫
-**Fake-chat.js** is a handy chat emulator.
+# Fake-chat
+![npm bundle size](https://img.shields.io/bundlephobia/min/fake-chat)
+![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCj5-dlnKYZ7O2HIYgP8urqw?style=flat)
+[![](https://data.jsdelivr.com/v1/package/npm/fake-chat/badge?style=rounded)](https://www.jsdelivr.com/package/npm/fake-chat)
+![npm](https://img.shields.io/npm/dm/fake-chat)
+![GitHub](https://img.shields.io/github/license/rah-emil/fake-chat)
+![GitHub issues](https://img.shields.io/github/issues/rah-emil/fake-chat)
 
-------------
-### Get started
+## Introduction
 
-### Instructions
-Your html:
-```html
-<div id="mychat"></div>
+### Overview
+JavaScript / TypeScript plugin for posting messages in your html code. It's project just for fun, for me
+
+### Features
+- posting messages with a selected delay
+
+### Installation
+
+#### NPM
+To install fake-chat using npm, run the following command in your project's terminal:
+
+```bash
+npm install fake-chat
 ```
-Your JavaScript:
+
+#### CDN (jsDelivr)
+You can also include fake-chat directly in your HTML file using a CDN like jsDelivr:
+
+Add the following script tag to your HTML file:
+
+```bash
+<script src="https://cdn.jsdelivr.net/npm/fake-chat@3.0.0/dist/fake-chat.umd.js"></script>
+```
+
+Replace 3.0.0 with the version you want to use. You can find the latest version on the npm package page.
+
+## Basic Usage
+
 ```javascript
-let mychat = new FakeChat('#mychat', {
-	messages: [
-		{
-			text: 'Hello my friend!✌',
-			timer: 1000,
-		},
-		{
-			text: 'Looking for a plugin that simulates chat?',
-			timer: 3000,
-		},
-		{
-			text: 'You found it! - <b>Fake-chat.js</b>',
-			timer: 5000,
-		},
-	],
-	visible: false,
-	adding: 'beforeend',
-	theme: {
-		theme: 'timber',
-		angle: 'square',
-	},
-	animation: {
-		class: 'animation_class',
-		function: 'animation_func',
-	}
-})
-```
+// or window.FakeChat, if you use UMD
+import FakeChat from 'fake-chat';
 
-------------
-### Parameters
-| Parameter  | Type  | Value  |
-| :------------ | :------------ | :------------ |
-| messages  | Array  | Array of messages, where 1 parameter is the message text, and 2 parameter is the message publication time.  |
-| visible  | Boolean  | If true, then messages will be published only when the chat appears in the area. **Default false**. |
-| adding  | String  | The order of publication of messages. [Where in relation to the element to insert the line. Only four options...](https://learn.javascript.ru/multi-insert "Where in relation to the element to insert the line. Only four options...") |
-| theme  | Object  | Includes "theme" and "angle".  |
-| animation  | Object  | Includes "class" and "function".  |
+// Select the container element
+const chat = document.querySelector('#fake_chat');
+
+// Define your chat options
+const chatOptions = {
+  // "afterbegin" | "afterend" | "beforebegin" | "beforeend" (default value)
+  position: 'beforeend',
+  messages: [
+    { text: 'Hello!', delay: 1000 },
+    { text: 'How are you?', delay: 1500 },
+    // Add more messages as needed
+  ],
+};
+
+// Create an instance of FakeChat and initialize it
+const fakeChat = new FakeChat(chat, chatOptions);
+fakeChat.init(); // async function
+```
