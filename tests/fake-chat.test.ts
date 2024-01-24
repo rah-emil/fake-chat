@@ -10,7 +10,7 @@ describe('Testing basic functionality', () => {
     document.body.appendChild(chat);
   
     const fakeChatOptions = {
-      messages: [{ text: 'test' }],
+      messages: [{ text: 'test', delay: 1000 }],
     };
     const fakeChat = new FakeChat(chat, fakeChatOptions);
   
@@ -51,8 +51,8 @@ describe('Testing basic functionality', () => {
     const fakeChatOptions = {
       position: 'afterbegin',
       messages: [
-        { text: 'test1' },
-        { text: 'test2' },
+        { text: 'test1', delay: 1000 },
+        { text: 'test2', delay: 1000 },
       ],
     };
     const fakeChat = new FakeChat(chat, fakeChatOptions);
