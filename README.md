@@ -1,73 +1,61 @@
-# Fake-chat.js 📫
-![Example №1](https://rah-emil.ru/img/fake-chat.js2.jpg "Example №1")
-**Fake-chat.js** - это удобный эмулятор чата.
+# Fake-chat
+![npm bundle size](https://img.shields.io/bundlephobia/min/fake-chat)
+![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCj5-dlnKYZ7O2HIYgP8urqw?style=flat)
+[![](https://data.jsdelivr.com/v1/package/npm/fake-chat/badge?style=rounded)](https://www.jsdelivr.com/package/npm/fake-chat)
+![npm](https://img.shields.io/npm/dm/fake-chat)
+![GitHub](https://img.shields.io/github/license/rah-emil/fake-chat)
+![GitHub issues](https://img.shields.io/github/issues/rah-emil/fake-chat)
 
-------------
-### Подключение
-CDN:
-```html
-<link rel="stylesheet" href="https://cdn.rah-emil.ru/fake-chat.js/fake-chat.min.css">
-<script src="https://cdn.rah-emil.ru/fake-chat.js/fake-chat.min.js"></script>
+## Introduction
+
+### Overview
+JavaScript / TypeScript plugin for posting messages in your html code. It's project just for fun, for me
+
+### Features
+- posting messages with a selected delay
+
+### Installation
+
+#### NPM
+To install fake-chat using npm, run the following command in your project's terminal:
+
+```bash
+npm install fake-chat
 ```
 
-Локально:
-(https://github.com/rah-emil/fake-chat.js/tree/master/app "Скачать файлы")
+#### CDN (jsDelivr)
+You can also include fake-chat directly in your HTML file using a CDN like jsDelivr:
 
-------------
-### Инструкция
-Ваш html:
+Add the following script tag to your HTML file:
+
 ```html
-<div id="mychat"></div>
+<script src="https://cdn.jsdelivr.net/npm/fake-chat@3.0.0/dist/fake-chat.umd.js"></script>
 ```
-Ваш JavaScript:
+
+Replace 3.0.0 with the version you want to use. You can find the latest version on the npm package page.
+
+## Basic Usage
+The plugin has typescript support!
+
 ```javascript
-let mychat = new FakeChat('#mychat', {
-	messages: [
-		{
-			text: 'Hello my friend!✌',
-			timer: 1000,
-		},
-		{
-			text: 'Looking for a plugin that simulates chat?',
-			timer: 3000,
-		},
-		{
-			text: 'You found it! - <b>Fake-chat.js</b>',
-			timer: 5000,
-		},
-	],
-	visible: false,
-	adding: 'beforeend',
-	theme: {
-		theme: 'timber',
-		angle: 'square',
-	},
-	animation: {
-		class: 'animation_class',
-		function: 'animation_func',
-	}
-})
+// or window.FakeChat, if you use UMD
+import FakeChat from 'fake-chat';
+
+// Select the container element
+const chat = document.querySelector('#fake_chat');
+
+// Define your chat options
+const chatOptions = {
+  // "afterbegin" | "afterend" | "beforebegin" | "beforeend" (default value)
+  position: 'beforeend',
+  messages: [
+    { text: 'Hello!', delay: 1000 },
+    { text: 'How are you?', delay: 1500 },
+    // Add more messages as needed
+  ],
+};
+
+// Create an instance of FakeChat and initialize it
+const fakeChat = new FakeChat(chat, chatOptions);
+fakeChat.init(); // async function
 ```
-
-------------
-### Темы
-##### Цветовые решения:
-- default *(по умолчанию)*
-- timber
-- amin
-- citrus
-- coral
-
-##### Закругления:
-- rounded *(по умолчанию)*
-- square
-
-------------
-### Параметры
-| Параметр  | Тип  | Значение  |
-| :------------ | :------------ | :------------ |
-| messages  | Array  | Массив сообщений, состоящий из объекта сообщения, где **text** - текст сообщения, а **timer** - время публикации сообщения.  |
-| visible  | Boolean  | Если true, то сообщения начнут публиковаться только когда чат появится в области видимости. **По умолчанию false**. |
-| adding  | String  | Порядок публикации сообщений. [Куда по отношению к elem вставлять строку. Всего четыре варианта...](https://learn.javascript.ru/multi-insert "Куда по отношению к elem вставлять строку. Всего четыре варианта...") |
-| theme  | Object  | Объект, содержаший в себе **theme** (*по умочанию "default"*) - имя темы и **angle** - тип уголов (*по умочанию "rounded"*)  |
-| animation  | Object  | Объект, содержаший в себе **class** - основной класс для анимируемого элемента и **function** - функция конкретной анимации  |
