@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 
 import { expect, test, describe } from 'vitest';
-import FakeChat from './../dist/fake-chat.mjs';
+import FakeChat from './../dist/fake-chat';
 
 
 describe('Testing basic functionality', () => {
@@ -40,6 +40,28 @@ describe('Testing basic functionality', () => {
   
     const chatContent = chat.innerHTML;
     const expectedHTML = '<div>test1</div><div>test2</div><div>test3</div><div>test4</div>';
+  
+    expect(chatContent).toEqual(expectedHTML);
+  });
+
+  test('Adding 2 messages after begin', async () => {
+    const chat = document.createElement('div');
+    document.body.appendChild(chat);
+  
+    const fakeChatOptions = {
+      position: 'afterbegin',
+      messages: [
+        { text: 'test1' },
+        { text: 'test2' },
+      ],
+    };
+    const fakeChat = new FakeChat(chat, fakeChatOptions);
+  
+    await fakeChat.init();
+
+    
+    const chatContent = chat.innerHTML;
+    const expectedHTML = '<div>test2</div><div>test1</div>';
   
     expect(chatContent).toEqual(expectedHTML);
   });
