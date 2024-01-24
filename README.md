@@ -28,13 +28,14 @@ You can also include fake-chat directly in your HTML file using a CDN like jsDel
 
 Add the following script tag to your HTML file:
 
-```bash
+```html
 <script src="https://cdn.jsdelivr.net/npm/fake-chat@3.0.0/dist/fake-chat.umd.js"></script>
 ```
 
 Replace 3.0.0 with the version you want to use. You can find the latest version on the npm package page.
 
 ## Basic Usage
+The plugin has typescript support!
 
 ```javascript
 // or window.FakeChat, if you use UMD
