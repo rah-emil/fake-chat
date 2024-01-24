@@ -43,6 +43,10 @@ class FakeChat {
     await this._appendMessage(ms);
   }
 
+  /**
+   * Recursive function of posting messages
+   * @param ms milliseconds for timeout
+   */
   private async _appendMessage(ms: number) {
     await delay(ms);
 
