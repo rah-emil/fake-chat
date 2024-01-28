@@ -1,5 +1,5 @@
 {
-  "name": "fake-chat",
+  "name": "@rah-emil/fake-chat",
   "version": "3.0.0",
   "description": "Fake-chat.js is a handy chat emulator",
   "main": "dist/fake-chat.mjs",
