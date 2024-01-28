@@ -1,7 +1,7 @@
 # Fake-chat
 ![npm bundle size](https://img.shields.io/bundlephobia/min/fake-chat)
 ![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCj5-dlnKYZ7O2HIYgP8urqw?style=flat)
-[![](https://data.jsdelivr.com/v1/package/npm/fake-chat/badge?style=rounded)](https://www.jsdelivr.com/package/npm/fake-chat)
+[![](https://data.jsdelivr.com/v1/package/npm/@rah-emil/fake-chat/badge?style=rounded)](https://www.jsdelivr.com/package/npm/@rah-emil/fake-chat)
 ![npm](https://img.shields.io/npm/dm/fake-chat)
 ![GitHub](https://img.shields.io/github/license/rah-emil/fake-chat)
 ![GitHub issues](https://img.shields.io/github/issues/rah-emil/fake-chat)
@@ -20,7 +20,7 @@ JavaScript / TypeScript plugin for posting messages in your html code. It's proj
 To install fake-chat using npm, run the following command in your project's terminal:
 
 ```bash
-npm install fake-chat
+npm install @rah-emil/fake-chat
 ```
 
 #### CDN (jsDelivr)
@@ -29,10 +29,10 @@ You can also include fake-chat directly in your HTML file using a CDN like jsDel
 Add the following script tag to your HTML file:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/fake-chat@3.0.0/dist/fake-chat.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@rah-emil/fake-chat@3.0.1/dist/fake-chat.umd.js"></script>
 ```
 
-Replace 3.0.0 with the version you want to use. You can find the latest version on the npm package page.
+Replace 3.0.1 with the version you want to use. You can find the latest version on the npm package page.
 
 ## Basic Usage
 The plugin has typescript support!

@@ -1,6 +1,6 @@
 {
   "name": "@rah-emil/fake-chat",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Fake-chat.js is a handy chat emulator",
   "main": "dist/fake-chat.mjs",
   "types": "dist/fake-chat.d.ts",
@@ -17,7 +17,7 @@
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix"
   },
-  "repository": "git+https://github.com/rah-emil/fake-chat.js.git",
+  "repository": "git+https://github.com/rah-emil/fake-chat.git",
   "keywords": [
     "chat",
     "javascript",
@@ -27,9 +27,9 @@
   "author": "Rah Emil",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rah-emil/fake-chat.js/issues"
+    "url": "https://github.com/rah-emil/fake-chat/issues"
   },
-  "homepage": "https://github.com/rah-emil/fake-chat.js#readme",
+  "homepage": "https://github.com/rah-emil/fake-chat#readme",
   "packageManager": "yarn@4.0.2",
   "devDependencies": {
     "@types/eslint": "^8",
