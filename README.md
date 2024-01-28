@@ -1,8 +1,8 @@
 # Fake-chat
-![npm bundle size](https://img.shields.io/bundlephobia/min/fake-chat)
+![npm bundle size](https://img.shields.io/bundlephobia/min/@rah-emil/fake-chat)
 ![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCj5-dlnKYZ7O2HIYgP8urqw?style=flat)
 [![](https://data.jsdelivr.com/v1/package/npm/@rah-emil/fake-chat/badge?style=rounded)](https://www.jsdelivr.com/package/npm/@rah-emil/fake-chat)
-![npm](https://img.shields.io/npm/dm/fake-chat)
+![npm](https://img.shields.io/npm/dm/@rah-emil/fake-chat)
 ![GitHub](https://img.shields.io/github/license/rah-emil/fake-chat)
 ![GitHub issues](https://img.shields.io/github/issues/rah-emil/fake-chat)
 
